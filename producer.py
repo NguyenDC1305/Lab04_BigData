@@ -40,7 +40,7 @@ for i in range(0, len(data), batch_size):
     item = data[i:i+batch_size]
     line = json.dumps(item, ensure_ascii=False) + '\n'
     conn.sendall(line.encode())
-    print(f"đã gửi {i/batch_size + 1} batch")
+    print(f"sended {i/batch_size + 1} batch")
     time.sleep(10)
 
 done_msg = {"comment":"DONE"}
